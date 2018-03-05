@@ -51,7 +51,7 @@ public class Notepad extends RecordInNotepad {
 
      String selectOption(){
         Scanner option = new Scanner(System.in);
-        System.out.println("Выберете, какое действие вы хотите сделать дальше: добавить запись, удалить запись, редактировать запись, посмотреть все записи текщуего блокнота или создать новый блокнот");
+        System.out.println("Выберете, какое действие вы хотите сделать дальше: добавить запись, удалить запись, редактировать запись");
         String enteredOption = option.next();
         return enteredOption;
     }
