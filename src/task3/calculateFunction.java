@@ -9,33 +9,46 @@ public class calculateFunction {
         Scanner bValue = new Scanner(System.in);
 
         System.out.println("Введите h:");
+        while (!hValue.hasNextInt()) {
+            System.out.println("Вы ввели неверное значение. Попробуйте снова");
+            hValue.next();
+        }
         int h = hValue.nextInt();
 
+
         System.out.println("Введите a:");
+        while (!aValue.hasNextInt()){
+            System.out.println("Вы ввели неверное значение. Попробуйте снова");
+            aValue.next();
+        }
         int a = aValue.nextInt();
 
+
         System.out.println("Введите b:");
+        while (!bValue.hasNextInt()) {
+            System.out.println("Вы ввели неверное значение. Попробуйте снова");
+            bValue.next();
+        }
         int b = bValue.nextInt();
 
-        if (a != b & a < b & h > 0) {
+
+        if (a != b && a < b && h > 0) {
 
             while (a < b) {
-                int function1;
-                function1 = a - 3;
 
-                int functionValue;
-                functionValue = b + 5;
+                double x = a+h;
+                double f;
 
-                System.out.print("Функция:" + function1 + " ");
-                System.out.print("Значение функции:" + functionValue + "\n");
+                f=Math.tan(2*x)-3;
+
+                System.out.println ("Значение F(" + x+")="+f);
 
                 a = a + h;
             }
 
         }
         else
-            System.out.println("Вы ввели неверные числа");
+            System.out.println("Данные преобразования нельзя провести с введенными числами");
     }
-
 
 }

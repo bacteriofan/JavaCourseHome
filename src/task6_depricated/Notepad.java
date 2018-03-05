@@ -1,4 +1,4 @@
-package task6;
+package task6_depricated;
 
 
 import java.util.Scanner;
@@ -11,7 +11,6 @@ public class Notepad extends RecordInNotepad {
         System.out.println("Введите новую запись");
         String enteredRecord = NewRecord.next();
         records.add(enteredRecord);
-
 
     }
 
@@ -56,10 +55,6 @@ public class Notepad extends RecordInNotepad {
         String enteredOption = option.next();
         return enteredOption;
     }
-
-
-
-
 
     }
 

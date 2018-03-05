@@ -1,4 +1,4 @@
-package task6;
+package task6_depricated;
 
 public class App extends Notepad {
 

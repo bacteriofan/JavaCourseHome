@@ -1,4 +1,4 @@
-package task6;
+package task6_depricated;
 
 import java.util.ArrayList;
 
