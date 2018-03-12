@@ -18,7 +18,7 @@ public class Array {
 
 
 
-        int max = array[0] + array[1];
+        int max = array[0] + array[size];
         for (int i = 1; i < size-1; i++) {
             int curr = array[i] + array[i+1];
             if (curr > max) max = curr;

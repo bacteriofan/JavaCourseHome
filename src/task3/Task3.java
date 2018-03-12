@@ -2,7 +2,7 @@ package task3;
 
 import java.util.Scanner;
 
-public class calculateFunction {
+public class Task3 {
     public static void main(String[] args) {
         Scanner hValue = new Scanner(System.in);
         Scanner aValue = new Scanner(System.in);
@@ -32,16 +32,15 @@ public class calculateFunction {
         int b = bValue.nextInt();
 
 
-        if (a != b && a < b && h > 0) {
+        if (a < b && h > 0) {
 
             while (a < b) {
 
-                double x = a+h;
                 double f;
 
-                f=Math.tan(2*x)-3;
+                f=Math.tan(2*a)-3;
 
-                System.out.println ("Значение F(" + x+")="+f);
+                System.out.println ("Значение F(" + a+")="+f);
 
                 a = a + h;
             }
