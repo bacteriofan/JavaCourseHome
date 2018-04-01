@@ -3,14 +3,18 @@
 package main.java.homework_2.task3;
 
 public class Notebooks extends Office {
-    private String Cover; //Переплет
+    public void setCover(String cover) {
+        cover = cover;
+    }
+
+    private String cover; //Переплет
 
     public Notebooks(String nameV, Double costV, String ProducerV, String cover) {
         super(nameV, costV, ProducerV);
-        Cover = cover;
+        cover = cover;
     }
 
     public String getCover() {
-        return Cover;
+        return cover;
     }
 }

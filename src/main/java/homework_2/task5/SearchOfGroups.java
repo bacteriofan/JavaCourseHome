@@ -1,11 +1,14 @@
 
 package main.java.homework_2.task5;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class SearchOfGroups {
 
-    public  static void Search(List<LogStudent> bd,String StudentV) {
+    public static List  Search(List<LogStudent> bd,String StudentV) {
+        List<String> ctr=new ArrayList<String>();
+
         for (Iterator<LogStudent> iter = bd.iterator(); iter.hasNext(); ) {
             LogStudent elementLog = iter.next();
             elementLog.getLogEstimates();
@@ -13,15 +16,23 @@ public class SearchOfGroups {
                 EstimatesStudent elementLogEstimatesStuden = iter1.next();
                 Student Student = elementLogEstimatesStuden.getStudent();
                 if (Student.getName().equals(StudentV)) {
-                    System.out.println("Группа=" + elementLog.getGroup().getName() +
+
+                    ctr.add("Группа=" + elementLog.getGroup().getName() +
                             ", Дисциплина=" + elementLog.getGroup().getDiscipline() +
                             ", Студент=" + elementLogEstimatesStuden.getStudent().getName() +
                             ", Оценка=" + elementLogEstimatesStuden.getEstimates());
+
+                    //System.out.println("Группа=" + elementLog.getGroup().getName() +
+                    //       ", Дисциплина=" + elementLog.getGroup().getDiscipline() +
+                    //      ", Студент=" + elementLogEstimatesStuden.getStudent().getName() +
+                    //      ", Оценка=" + elementLogEstimatesStuden.getEstimates());
+
 
                 }
             }
 
 
         }
+        return ctr;
     }
 }

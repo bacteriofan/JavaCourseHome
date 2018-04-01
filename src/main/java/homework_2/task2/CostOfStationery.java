@@ -2,21 +2,24 @@
 
 package main.java.homework_2.task2;
 
+import java.util.Iterator;
+import java.util.Set;
+
+
+
 public class CostOfStationery {
 
-    public double sum(Employee[] Employee, String sotrudnik){
+    public double sum(Set Employee, String sotrudnir){
         double sum=0;
-        for (int i = 0; i < Employee.length; i++) {
-            String sotrudnikClassa=Employee[i].getName();
-            if (sotrudnikClassa.equals(sotrudnik)) {
-                Office[] KC=Employee[i].getOfficeAtTheEmployee();
+        for (Iterator<Employee> iter = Employee.iterator(); iter.hasNext(); ) {
+            Employee elementEmployee = iter.next();
+            elementEmployee.getOfficeAtTheEmployee();
+            for (Iterator<Office> iter1 = elementEmployee.getOfficeAtTheEmployee().iterator(); iter1.hasNext(); ) {
+                Office elementofficeAtTheEmployee = iter1.next();
+                if (elementEmployee.getName().equals(sotrudnir)) {
+                    sum+=elementofficeAtTheEmployee.getCost();
 
-                for (int j = 0; j < KC.length; j++) {
-
-                    sum+=KC[j].getCost();
                 }
-
-
             }
 
 

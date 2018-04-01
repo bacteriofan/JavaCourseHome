@@ -1,5 +1,4 @@
 package main.java.homework_2.task6;
-
 public class AtomicBoat {
     private int x;
     private int y;
@@ -41,5 +40,7 @@ public class AtomicBoat {
     }
 
 }
+
+
 
 

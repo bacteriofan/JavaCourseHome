@@ -1,6 +1,5 @@
 
 package main.java.homework_2.task5;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,30 +14,29 @@ public class LogStudentBD {
         Student Chapkin = new Student("Chapkin");
         Student Chapa = new Student("Chapa");
 
-        // MATHEMATICS
-        Group GroupMathematic = new Group("K-2018",Discipline.MATHEMATICS, new ArrayList(), "int");
+
+//        MATHEMATICS
+        Group GroupMathematic = new Group("K-2018",Discipline.MATHEMATICS, new ArrayList<Student>(), "int");
         GroupMathematic.setLogStudent(Ivanov);
         GroupMathematic.setLogStudent(Sidorov);
         GroupMathematic.setLogStudent(Chapa);
 
-        LogStudent LogStudentMathematics=new LogStudent(GroupMathematic, new ArrayList());
+        LogStudent LogStudentMathematics=new LogStudent(GroupMathematic, new ArrayList<Student>());
         LogStudentMathematics.setLogEstimates(LogStudentBD(GroupMathematic.getTipEstimates(),  Ivanov));
         LogStudentMathematics.setLogEstimates(LogStudentBD(GroupMathematic.getTipEstimates(),  Sidorov));
         LogStudentMathematics.setLogEstimates(LogStudentBD(GroupMathematic.getTipEstimates(),  Chapa));
-
-        //INFORMATICS
-        Group GroupInformatics = new Group("Ф-2018",Discipline.INFORMATICS, new ArrayList(), "int");
+//INFORMATICS
+        Group GroupInformatics = new Group("Ф-2018",Discipline.INFORMATICS, new ArrayList<Student>(), "int");
         GroupInformatics.setLogStudent(Ivanov);
         GroupInformatics.setLogStudent(Sidorov);
         GroupInformatics.setLogStudent(Chapa);
 
-        LogStudent LogStudentInformatics=new LogStudent(GroupInformatics, new ArrayList());
+        LogStudent LogStudentInformatics=new LogStudent(GroupInformatics, new ArrayList<Student>());
         LogStudentInformatics.setLogEstimates(LogStudentBD(GroupInformatics.getTipEstimates(), Petrov));
         LogStudentInformatics.setLogEstimates(LogStudentBD(GroupInformatics.getTipEstimates(),  Sidorov));
         LogStudentInformatics.setLogEstimates(LogStudentBD(GroupInformatics.getTipEstimates(),  Chapa));
-
         //INFORMATICS
-        Group GroupProgramming = new Group("Ж-2018",Discipline.PROGRAMMING, new ArrayList(), "double");
+        Group GroupProgramming = new Group("Ж-2018",Discipline.PROGRAMMING, new ArrayList<Student>(), "double");
         GroupProgramming.setLogStudent(Ivanov);
         GroupProgramming.setLogStudent(Sidorov);
         GroupProgramming.setLogStudent(Chapa);

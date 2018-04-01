@@ -1,13 +1,19 @@
-
-package main.java.homework_2.task3;
+package test.homework_2_test.task_3_test;
+import main.java.homework_2.task3.*;
+import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class ClassMain {
-    public  static void main(String[] args) {
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
+public class ClassMainTest {
+
+    @Test
+    public void main() {
         EmployeeBD EmployeeBD=new EmployeeBD();
 
         Set Employees =  EmployeeBD.bd();
@@ -20,15 +26,11 @@ public class ClassMain {
         c1.setOfficeAtTheEmployee(new Notebooks("Блакнот",50.5,"Греция","Твердый"));
         c1.setOfficeAtTheEmployee(new Paper("Папка",22.3,"Германия",500));
 
+        Iterator<Office> iter = SetOfTheBeginner.iterator();
 
+        Office elementNewEmployee = iter.next();
+        assertThat("Office{name='Ручка', cost=22.3, Producer='Германия'}", is(elementNewEmployee.toString()));
 
-        System.out.println("Набор новечка "+c1.getName());
-        for (Object stroka: SetOfTheBeginner) {
-            //stroka.getClass();
-            System.out.println(stroka);
-
-        }
 
     }
 }
-

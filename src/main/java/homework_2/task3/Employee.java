@@ -10,12 +10,12 @@ public class Employee {
     }
 
     private String name; //Наименование
-    private  String Position; //Должность
+    private  String       position; //Должность
 
     private List OfficeAtTheEmployee; //Канцелярия у Сотрудника
     public Employee(String nameV, String PositionV, List OfficeAtTheEmployeeV){
         name=nameV;
-        Position=PositionV;
+        position=PositionV;
         OfficeAtTheEmployee=OfficeAtTheEmployeeV;
 
     }
@@ -29,7 +29,23 @@ public class Employee {
     }
 
     public void setOfficeAtTheEmployee( Office officeAtTheEmployeeV) {
-        OfficeAtTheEmployee.add( officeAtTheEmployeeV);
+        OfficeAtTheEmployee.add(officeAtTheEmployeeV);
     }
 
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        position = position;
+    }
+
+    public void setOfficeAtTheEmployee(List officeAtTheEmployee) {
+        OfficeAtTheEmployee = officeAtTheEmployee;
+    }
 }

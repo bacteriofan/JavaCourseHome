@@ -2,16 +2,20 @@
 package main.java.homework_2.task4;
 
 public class Pen extends Office {
-    private String CoreType; //Тип стержня
+    private String coreType; //Тип стержня
 
     public Pen(String nameV, Double costV, String ProducerV, String coreType) {
         super(nameV, costV, ProducerV);
-        CoreType = coreType;
+        coreType = coreType;
     }
 
 
 
     public String getCoreType() {
-        return CoreType;
+        return coreType;
+    }
+
+    public void setCoreType(String coreType) {
+        this.coreType = coreType;
     }
 }

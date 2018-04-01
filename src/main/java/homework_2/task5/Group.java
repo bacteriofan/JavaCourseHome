@@ -6,14 +6,14 @@ public class Group {
     private String  name; //Наименование
     private Discipline discipline; //Дисциплина
     private List logStudents;
-    private String TipEstimates;
+    private String tipEstimates;
 
 
     public Group(String  nameV, Discipline disciplineV, List logStudentV, String tipEstimatesV) {
         this.name=nameV;
         this.discipline = disciplineV;
         this.logStudents = logStudentV;
-        TipEstimates = tipEstimatesV;
+        tipEstimates = tipEstimatesV;
     }
 
     public void setLogStudent(Student Student) {
@@ -21,7 +21,7 @@ public class Group {
     }
 
     public String getTipEstimates() {
-        return TipEstimates;
+        return tipEstimates;
     }
 
     public Discipline getDiscipline() {

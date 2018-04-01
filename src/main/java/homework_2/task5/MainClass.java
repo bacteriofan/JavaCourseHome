@@ -1,6 +1,7 @@
 
 package main.java.homework_2.task5;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 public class MainClass {
@@ -12,7 +13,15 @@ public class MainClass {
         Scanner scan = new Scanner(System.in);
         String StudentV = scan.nextLine();
 
-        SearchOfGroups.Search(bd, StudentV);
+        List<String> ctr=new ArrayList<String>();
+
+        ctr.addAll(SearchOfGroups.Search(bd, StudentV));
+
+
+        for (Object stroka: ctr) {
+            //stroka.getClass();
+            System.out.println(stroka);}
+
 
     }
 
